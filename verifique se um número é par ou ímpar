@@ -1,14 +1,14 @@
 
 
-def check_number():
-    num = input("Enter a number: ")
+def is_even_or_odd():
+    number = input("Enter a number: ")
     try:
-        num = int(num)
-        if num % 2 == 0:
-            print(str(num) + " is Even")
+        number = int(number)
+        if number % 2 == 0:
+            print(str(number) + " is Even")
         else:
-            print(str(num) + " is Odd")
-    except ValueError:
-        print("Impossible to determine, not a valid number")
+            print(str(number) + " is Odd")
+    except:
+        print("Invalid input, please enter a number")
 
-check_number()
+is_even_or_odd()
