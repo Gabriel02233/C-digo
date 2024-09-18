@@ -1,0 +1,11 @@
+
+  # Get temperature in Celsius
+c = input("Enter temperature in Celsius: ")
+c = float(c)
+
+# Convert to Fahrenheit
+f = 0
+f = (c * 9 / 5) + 32
+
+# Print the result
+print("Temperature in Fahrenheit is: " + str(f))
