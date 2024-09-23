@@ -1,0 +1,16 @@
+purchased_items = []
+item_prices = {}
+
+def add_item(item, price):
+    purchased_items.append(item)
+    item_prices[item] = price
+
+def print_items():
+    for item in purchased_items:
+        print(f"Item: {item}, Price: {item_prices[item]}")
+
+add_item("Apple", 1.2)
+add_item("Banana", 0.5)
+add_item("Orange", 0.8)
+
+print_items()
