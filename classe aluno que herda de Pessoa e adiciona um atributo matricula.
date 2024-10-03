@@ -1,0 +1,36 @@
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def apresentar(self):
+        mensagem = f"Seu nome é {self.nome} e você tem {self.idade} anos."
+        print(mensagem)
+        confirmacao = input("Essa informação está correta? (sim/não): ")
+        if confirmacao.lower() == 'sim':
+            print("Ótimo! Informação confirmada.")
+        else:
+            print("Por favor, verifique as informações e tente novamente.")
+
+    def aniversario(self):
+        self.idade += 1
+        print(f"Feliz aniversário! Agora você tem {self.idade} anos.")
+
+class Aluno(Pessoa):
+    def __init__(self, nome, idade, matricula):
+        super().__init__(nome, idade)
+        self.matricula = matricula
+
+    def apresentar(self):
+        mensagem = f"Seu nome é {self.nome}, você tem {self.idade} anos e sua matrícula é {self.matricula}."
+        print(mensagem)
+        confirmacao = input("Essa informação está correta? (sim/não): ")
+        if confirmacao.lower() == 'sim':
+            print("Ótimo! Informação confirmada.")
+        else:
+            print("Por favor, verifique as informações e tente novamente.")
+
+# Exemplo de uso
+aluno1 = Aluno("Ana", 21, "A12345")
+aluno1.apresentar()
+aluno1.aniversario()
