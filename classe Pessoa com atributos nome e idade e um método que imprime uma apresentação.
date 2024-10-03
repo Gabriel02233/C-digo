@@ -1,0 +1,17 @@
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def apresentar(self):
+        mensagem = f"Seu nome é {self.nome} e você tem {self.idade} anos."
+        print(mensagem)
+        confirmacao = input("Essa informação está correta? (sim/não): ")
+        if confirmacao.lower() == 'sim':
+            print("Ótimo! Informação confirmada.")
+        else:
+            print("Por favor, verifique as informações e tente novamente.")
+
+# Exemplo de uso
+pessoa1 = Pessoa("João", 30)
+pessoa1.apresentar()
